@@ -7,7 +7,7 @@ const secretkey = process.env.secretkey;
 module.exports = async function loginMiddelware(req, res, next) {
     const { email, password } = req.body;
     try {
-        if (!email || !password) return res.send({ msg: 'Please provide all the deatails.' })
+        if (!email || !password) return res.send({ msg: 'Please provide all the deatails, Key names is case-sensitive.' })
         let user = await UserModel.findOne({ email });
         if (!user) return res.send({ msg: 'User Does Not Exists.' })
         bcrypt.compare(password, user.password, (err, result) => {

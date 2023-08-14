@@ -9,7 +9,12 @@ require('dotenv').config()
 const port = process.env.port || 8080;
 
 app.get('/', (req, res) => {
-    res.send({ msg: 'Welcome To Air Ticket Booking Backend' })
+    res.send({
+        msg: 'Welcome To Air Ticket Booking Backend',
+        name: 'Rushikesh Diliprao Bhomale',
+        student_code: 'fw25_348',
+        unit: 'RN101'
+    })
 })
 
 app.use('/api', UserRouter)

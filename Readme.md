@@ -2,6 +2,23 @@
 
 # Air Ticket Booking
 
+```js
+ routes: {
+            userRoute: {
+                register: { METHOD: "POST", ENDPOINT: '/api/register', DESCRIPTION: 'This endpoint should allow users to register. Hash the password on store' },
+                login: { METHOD: "POST", ENDPOINT: '/api/login', DESCRIPTION: 'This endpoint should allow users to login. Return JWT token on successful login.' }
+            },
+            flightRouter: {
+                getAllFlight: { METHOD: "GET", ENDPOINT: '/api/flights', DESCRIPTION: 'This endpoint should return a list of all available flights.' },
+                getFlightById: { METHOD: "GET", ENDPOINT: '/api/flights/:id', DESCRIPTION: 'This endpoint should return the details of a specific flight identified by its ID.' },
+                addNewFlight:{ METHOD: "POST", ENDPOINT: '/api/flights', DESCRIPTION: ' This endpoint should allow users to add new flights to the system.' },
+                updateFlightData:{ METHOD: "PUT / PATCH ", ENDPOINT: '/api/flights/:id', DESCRIPTION: 'This endpoint should allow users to update the details of a specific flight identified by its ID.' },
+                deleteFlightById:{ METHOD: "DELETE", ENDPOINT: '/api/flights/:id', DESCRIPTION: 'This endpoint should allow users to delete a specific flight identified by its ID.' }
+            },
+  
+        }
+```
+
 ## Instructions:
 
 - Read the entire question carefully for at least 15 mins, understand it and then code it.
@@ -61,19 +78,19 @@ The following API routes should be developed to achieve the required functionali
 
 - ****Populate all the Object ID’s in the API response.**
 
-| METHOD | ENDPOINT | DESCRIPTION | STATUS CODE |
-| --- | --- | --- | --- |
-| POST | /api/register | This endpoint should allow users to register. Hash the password on store | 201 |
-| POST | /api/login | This endpoint should allow users to login. Return JWT token on successful login. | 201 |
-| GET | /api/flights | This endpoint should return a list of all available flights. | 200 |
-| GET | /api/flights/:id | This endpoint should return the details of a specific flight identified by its ID. | 200 |
-| POST | /api/flights | This endpoint should allow users to add new flights to the system. | 201 |
-| PUT / PATCH | /api/flights/:id | This endpoint should allow users to update the details of a specific flight identified by its ID. | 204 |
-| DELETE | /api/flights/:id | This endpoint should allow users to delete a specific flight identified by its ID. | 202 |
-| POST | /api/booking | This endpoint should allow the user to book flights. | 201 |
-| GET | /api/dashboard | This point should list all the bookings so far with the user and flight details. (Populate the entire flight and user data, and not just id’s | 200 |
-| PUT/PATCH | /api/dashboard/:id | This endpoint should allow the user to edit / update a booking. | 204 |
-| DELETE | /api/dashboard/:id | This endpoint should allow the user to delete a booking | 202 |
+| METHOD      | ENDPOINT           | DESCRIPTION                                                                                                                                   | STATUS CODE |
+| ----------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| POST        | /api/register      | This endpoint should allow users to register. Hash the password on store                                                                      | 201         |
+| POST        | /api/login         | This endpoint should allow users to login. Return JWT token on successful login.                                                              | 201         |
+| GET         | /api/flights       | This endpoint should return a list of all available flights.                                                                                  | 200         |
+| GET         | /api/flights/:id   | This endpoint should return the details of a specific flight identified by its ID.                                                            | 200         |
+| POST        | /api/flights       | This endpoint should allow users to add new flights to the system.                                                                            | 201         |
+| PUT / PATCH | /api/flights/:id   | This endpoint should allow users to update the details of a specific flight identified by its ID.                                             | 204         |
+| DELETE      | /api/flights/:id   | This endpoint should allow users to delete a specific flight identified by its ID.                                                            | 202         |
+| POST        | /api/booking       | This endpoint should allow the user to book flights.                                                                                          | 201         |
+| GET         | /api/dashboard     | This point should list all the bookings so far with the user and flight details. (Populate the entire flight and user data, and not just id’s | 200         |
+| PUT/PATCH   | /api/dashboard/:id | This endpoint should allow the user to edit / update a booking.                                                                               | 204         |
+| DELETE      | /api/dashboard/:id | This endpoint should allow the user to delete a booking                                                                                       | 202         |
 
 ---
 

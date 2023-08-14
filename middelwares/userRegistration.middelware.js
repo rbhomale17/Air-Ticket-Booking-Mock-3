@@ -7,7 +7,7 @@ const saltRounds = +process.env.saltRounds;
 module.exports = async function registrationMiddelware(req, res, next) {
 
     const { name, email, password } = req.body;
-    if (!name || !email || !password) return res.send({ msg: 'Please Provide All Details.' });
+    if (!name || !email || !password) return res.send({ msg: 'Please provide all the deatails, Key names is case-sensitive.' });
     let user = await UserModel.findOne({ email });
     console.log(user)
     if (!user)
